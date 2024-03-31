@@ -1,20 +1,17 @@
 {
-  "collectionName": "components_hero_section_hero_sections",
+  "collectionName": "components_hero_section_priority_areas",
   "info": {
-    "displayName": "hero-section",
+    "displayName": "priorityAreas",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "heroTitle": {
+    "title": {
       "type": "string"
     },
-    "heroDescription": {
-      "type": "text"
-    },
-    "BackgroundImage": {
+    "icon": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -22,6 +19,9 @@
         "videos",
         "audios"
       ]
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
