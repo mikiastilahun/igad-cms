@@ -58,9 +58,6 @@
     "SupportplatformTitle": {
       "type": "string"
     },
-    "supportPlatformContent": {
-      "type": "blocks"
-    },
     "partnersTitle": {
       "type": "string"
     },
@@ -69,6 +66,9 @@
       "type": "component",
       "repeatable": true,
       "component": "partner.partner"
+    },
+    "supportPlatformContent": {
+      "type": "richtext"
     }
   }
 }

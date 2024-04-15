@@ -789,15 +789,16 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     singularName: 'article';
     pluralName: 'articles';
     displayName: 'news';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
-    content: Attribute.Blocks;
     thumbnail: Attribute.Media;
     date: Attribute.Date;
+    content: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -872,9 +873,9 @@ export interface ApiHomeHome extends Schema.SingleType {
     regionalStatisticsDescription: Attribute.Text;
     regionalStatistic: Attribute.Component<'statstics.regional-stat', true>;
     SupportplatformTitle: Attribute.String;
-    supportPlatformContent: Attribute.Blocks;
     partnersTitle: Attribute.String;
     partner: Attribute.Component<'partner.partner', true>;
+    supportPlatformContent: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
