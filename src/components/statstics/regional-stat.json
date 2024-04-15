@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_statstics_regional_stats",
+  "info": {
+    "displayName": "regionalStat"
+  },
+  "options": {},
+  "attributes": {
+    "statisticsTitle": {
+      "type": "string"
+    },
+    "Djibouti": {
+      "type": "float"
+    },
+    "Eritrea": {
+      "type": "float"
+    },
+    "Ethiopia": {
+      "type": "float"
+    },
+    "Kenya": {
+      "type": "float"
+    },
+    "Somalia": {
+      "type": "float"
+    },
+    "SouthSudan": {
+      "type": "float"
+    },
+    "Sudan": {
+      "type": "float"
+    },
+    "Uganda": {
+      "type": "float"
+    }
+  }
+}

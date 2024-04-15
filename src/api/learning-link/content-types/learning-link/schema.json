@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_links",
+  "info": {
+    "singularName": "learning-link",
+    "pluralName": "learning-links",
+    "displayName": "learningLink"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

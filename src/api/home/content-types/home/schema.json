@@ -31,18 +31,44 @@
     },
     "thirdStat": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "statstics.statstics"
     },
     "forthStat": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "statstics.statstics"
     },
     "priorityAreas": {
       "type": "component",
       "repeatable": true,
       "component": "priority-areas.priority-areas"
+    },
+    "regionalStatisticsTitle": {
+      "type": "string"
+    },
+    "regionalStatisticsDescription": {
+      "type": "text"
+    },
+    "regionalStatistic": {
+      "type": "component",
+      "repeatable": true,
+      "component": "statstics.regional-stat"
+    },
+    "SupportplatformTitle": {
+      "type": "string"
+    },
+    "supportPlatformContent": {
+      "type": "blocks"
+    },
+    "partnersTitle": {
+      "type": "string"
+    },
+    "partner": {
+      "displayName": "partner",
+      "type": "component",
+      "repeatable": true,
+      "component": "partner.partner"
     }
   }
 }

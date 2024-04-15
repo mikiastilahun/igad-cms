@@ -865,14 +865,53 @@ export interface ApiHomeHome extends Schema.SingleType {
     homeHeroSection: Attribute.Component<'hero-section.hero-section', true>;
     firstStat: Attribute.Component<'statstics.statstics'>;
     secondStat: Attribute.Component<'statstics.statstics'>;
-    thirdStat: Attribute.Component<'statstics.statstics', true>;
-    forthStat: Attribute.Component<'statstics.statstics', true>;
+    thirdStat: Attribute.Component<'statstics.statstics'>;
+    forthStat: Attribute.Component<'statstics.statstics'>;
     priorityAreas: Attribute.Component<'priority-areas.priority-areas', true>;
+    regionalStatisticsTitle: Attribute.String;
+    regionalStatisticsDescription: Attribute.Text;
+    regionalStatistic: Attribute.Component<'statstics.regional-stat', true>;
+    SupportplatformTitle: Attribute.String;
+    supportPlatformContent: Attribute.Blocks;
+    partnersTitle: Attribute.String;
+    partner: Attribute.Component<'partner.partner', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
+  collectionName: 'learning_links';
+  info: {
+    singularName: 'learning-link';
+    pluralName: 'learning-links';
+    displayName: 'learningLink';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    thumbnail: Attribute.Media;
+    URL: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::learning-link.learning-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::learning-link.learning-link',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -898,6 +937,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
+      'api::learning-link.learning-link': ApiLearningLinkLearningLink;
     }
   }
 }
