@@ -1,18 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface HeroSectionHeroSection extends Schema.Component {
-  collectionName: 'components_hero_section_hero_sections';
-  info: {
-    displayName: 'hero-section';
-    description: '';
-  };
-  attributes: {
-    heroTitle: Attribute.String;
-    heroDescription: Attribute.Text;
-    BackgroundImage: Attribute.Media;
-  };
-}
-
 export interface PartnerPartner extends Schema.Component {
   collectionName: 'components_partner_partners';
   info: {
@@ -70,7 +57,6 @@ export interface StatsticsStatstics extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'hero-section.hero-section': HeroSectionHeroSection;
       'partner.partner': PartnerPartner;
       'priority-areas.priority-areas': PriorityAreasPriorityAreas;
       'statstics.regional-stat': StatsticsRegionalStat;

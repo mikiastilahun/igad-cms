@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "homeHeroSection": {
-      "displayName": "hero-section",
-      "type": "component",
-      "repeatable": true,
-      "component": "hero-section.hero-section"
-    },
     "firstStat": {
       "displayName": "statstics",
       "type": "component",
@@ -38,11 +32,6 @@
       "type": "component",
       "repeatable": false,
       "component": "statstics.statstics"
-    },
-    "priorityAreas": {
-      "type": "component",
-      "repeatable": true,
-      "component": "priority-areas.priority-areas"
     },
     "regionalStatisticsTitle": {
       "type": "string"
@@ -69,6 +58,16 @@
     },
     "supportPlatformContent": {
       "type": "richtext"
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

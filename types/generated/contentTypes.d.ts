@@ -863,12 +863,10 @@ export interface ApiHomeHome extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
-    homeHeroSection: Attribute.Component<'hero-section.hero-section', true>;
     firstStat: Attribute.Component<'statstics.statstics'>;
     secondStat: Attribute.Component<'statstics.statstics'>;
     thirdStat: Attribute.Component<'statstics.statstics'>;
     forthStat: Attribute.Component<'statstics.statstics'>;
-    priorityAreas: Attribute.Component<'priority-areas.priority-areas', true>;
     regionalStatisticsTitle: Attribute.String;
     regionalStatisticsDescription: Attribute.Text;
     regionalStatistic: Attribute.Component<'statstics.regional-stat', true>;
@@ -876,6 +874,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     partnersTitle: Attribute.String;
     partner: Attribute.Component<'partner.partner', true>;
     supportPlatformContent: Attribute.RichText;
+    BackgroundImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
@@ -917,6 +916,39 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
   };
 }
 
+export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
+  collectionName: 'priority_areas';
+  info: {
+    singularName: 'priority-area';
+    pluralName: 'priority-areas';
+    displayName: 'PriorityArea';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    ShortDescription: Attribute.String;
+    Content: Attribute.RichText;
+    icon: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::priority-area.priority-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::priority-area.priority-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -939,6 +971,7 @@ declare module '@strapi/types' {
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
+      'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
     }
   }
 }
