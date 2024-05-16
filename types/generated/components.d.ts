@@ -11,16 +11,40 @@ export interface PartnerPartner extends Schema.Component {
   };
 }
 
-export interface PriorityAreasPriorityAreas extends Schema.Component {
-  collectionName: 'components_hero_section_priority_areas';
+export interface PriorityAreasActionItemList extends Schema.Component {
+  collectionName: 'components_priority_areas_action_item_lists';
   info: {
-    displayName: 'priorityAreas';
+    displayName: 'ActionItemList';
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    icon: Attribute.Media;
-    description: Attribute.Text;
+    item: Attribute.Text;
+  };
+}
+
+export interface PriorityAreasActionItems extends Schema.Component {
+  collectionName: 'components_priority_areas_action_items';
+  info: {
+    displayName: 'ActionItems';
+    description: '';
+  };
+  attributes: {
+    ActionTitle: Attribute.String;
+    actionItemList: Attribute.Component<
+      'priority-areas.action-item-list',
+      true
+    >;
+  };
+}
+
+export interface PriorityAreasLinks extends Schema.Component {
+  collectionName: 'components_priority_areas_links';
+  info: {
+    displayName: 'links';
+  };
+  attributes: {
+    label: Attribute.String;
+    url: Attribute.String;
   };
 }
 
@@ -58,7 +82,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'partner.partner': PartnerPartner;
-      'priority-areas.priority-areas': PriorityAreasPriorityAreas;
+      'priority-areas.action-item-list': PriorityAreasActionItemList;
+      'priority-areas.action-items': PriorityAreasActionItems;
+      'priority-areas.links': PriorityAreasLinks;
       'statstics.regional-stat': StatsticsRegionalStat;
       'statstics.statstics': StatsticsStatstics;
     }

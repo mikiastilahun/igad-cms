@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_priority_areas_action_item_lists",
+  "info": {
+    "displayName": "ActionItemList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "text"
+    }
+  }
+}

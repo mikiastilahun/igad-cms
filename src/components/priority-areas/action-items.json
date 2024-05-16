@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_priority_areas_action_items",
+  "info": {
+    "displayName": "ActionItems",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ActionTitle": {
+      "type": "string"
+    },
+    "actionItemList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.action-item-list"
+    }
+  }
+}

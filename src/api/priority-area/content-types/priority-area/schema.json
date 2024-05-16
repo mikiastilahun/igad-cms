@@ -4,7 +4,8 @@
   "info": {
     "singularName": "priority-area",
     "pluralName": "priority-areas",
-    "displayName": "PriorityArea"
+    "displayName": "PriorityArea",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,14 +22,40 @@
       "type": "richtext"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "IgadActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.action-items"
+    },
+    "memberStateActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.action-items"
+    },
+    "expectedOutcomes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.action-item-list"
+    },
+    "stackholders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.links"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.links"
     }
   }
 }

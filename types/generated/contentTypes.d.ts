@@ -922,6 +922,7 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
     singularName: 'priority-area';
     pluralName: 'priority-areas';
     displayName: 'PriorityArea';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -931,6 +932,17 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
     ShortDescription: Attribute.String;
     Content: Attribute.RichText;
     icon: Attribute.Media;
+    IgadActions: Attribute.Component<'priority-areas.action-items', true>;
+    memberStateActions: Attribute.Component<
+      'priority-areas.action-items',
+      true
+    >;
+    expectedOutcomes: Attribute.Component<
+      'priority-areas.action-item-list',
+      true
+    >;
+    stackholders: Attribute.Component<'priority-areas.links', true>;
+    partners: Attribute.Component<'priority-areas.links', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
