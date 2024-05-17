@@ -11,6 +11,18 @@ export interface PartnerPartner extends Schema.Component {
   };
 }
 
+export interface PopulationPopulationData extends Schema.Component {
+  collectionName: 'components_population_population_data';
+  info: {
+    displayName: 'populationData';
+  };
+  attributes: {
+    year: Attribute.Date;
+    male: Attribute.BigInteger;
+    female: Attribute.BigInteger;
+  };
+}
+
 export interface PriorityAreasActionItemList extends Schema.Component {
   collectionName: 'components_priority_areas_action_item_lists';
   info: {
@@ -82,6 +94,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'partner.partner': PartnerPartner;
+      'population.population-data': PopulationPopulationData;
       'priority-areas.action-item-list': PriorityAreasActionItemList;
       'priority-areas.action-items': PriorityAreasActionItems;
       'priority-areas.links': PriorityAreasLinks;

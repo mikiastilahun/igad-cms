@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "populations",
+  "info": {
+    "singularName": "population",
+    "pluralName": "populations",
+    "displayName": "population",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ethiopia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Djibouti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Eritrea": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Kenya": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Somalia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "SouthSudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Sudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    },
+    "Uganda": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population-data"
+    }
+  }
+}

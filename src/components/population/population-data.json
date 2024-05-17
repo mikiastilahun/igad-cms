@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_population_population_data",
+  "info": {
+    "displayName": "populationData"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "date"
+    },
+    "male": {
+      "type": "biginteger"
+    },
+    "female": {
+      "type": "biginteger"
+    }
+  }
+}

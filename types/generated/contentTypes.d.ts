@@ -916,6 +916,44 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
   };
 }
 
+export interface ApiPopulationPopulation extends Schema.SingleType {
+  collectionName: 'populations';
+  info: {
+    singularName: 'population';
+    pluralName: 'populations';
+    displayName: 'population';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Ethiopia: Attribute.Component<'population.population-data', true>;
+    Djibouti: Attribute.Component<'population.population-data', true>;
+    Eritrea: Attribute.Component<'population.population-data', true>;
+    Kenya: Attribute.Component<'population.population-data', true>;
+    Somalia: Attribute.Component<'population.population-data', true>;
+    SouthSudan: Attribute.Component<'population.population-data', true>;
+    Sudan: Attribute.Component<'population.population-data', true>;
+    Uganda: Attribute.Component<'population.population-data', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::population.population',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::population.population',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
   collectionName: 'priority_areas';
   info: {
@@ -943,6 +981,7 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
     >;
     stackholders: Attribute.Component<'priority-areas.links', true>;
     partners: Attribute.Component<'priority-areas.links', true>;
+    header: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -954,6 +993,77 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::priority-area.priority-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPublicationPublication extends Schema.CollectionType {
+  collectionName: 'publications';
+  info: {
+    singularName: 'publication';
+    pluralName: 'publications';
+    displayName: 'publication';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    coverImage: Attribute.Media;
+    content: Attribute.RichText;
+    files: Attribute.Media;
+    publicationDate: Attribute.Date;
+    featured: Attribute.Boolean;
+    publication_type: Attribute.Relation<
+      'api::publication.publication',
+      'oneToOne',
+      'api::publication-type.publication-type'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::publication.publication',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::publication.publication',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPublicationTypePublicationType
+  extends Schema.CollectionType {
+  collectionName: 'publication_types';
+  info: {
+    singularName: 'publication-type';
+    pluralName: 'publication-types';
+    displayName: 'publicationType';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::publication-type.publication-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::publication-type.publication-type',
       'oneToOne',
       'admin::user'
     > &
@@ -983,7 +1093,10 @@ declare module '@strapi/types' {
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
+      'api::population.population': ApiPopulationPopulation;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
+      'api::publication.publication': ApiPublicationPublication;
+      'api::publication-type.publication-type': ApiPublicationTypePublicationType;
     }
   }
 }

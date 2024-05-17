@@ -56,6 +56,9 @@
       "type": "component",
       "repeatable": true,
       "component": "priority-areas.links"
+    },
+    "header": {
+      "type": "text"
     }
   }
 }
