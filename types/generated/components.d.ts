@@ -8,18 +8,18 @@ export interface MigrationMigrationData extends Schema.Component {
     description: '';
   };
   attributes: {
-    migrant_total: Attribute.BigInteger;
-    migrant_male: Attribute.BigInteger;
-    migrant_female: Attribute.BigInteger;
-    migrant_15_plus: Attribute.BigInteger;
-    migrant_15_plus_male: Attribute.BigInteger;
-    migrant_15_plus_female: Attribute.BigInteger;
-    migrant_labor_force: Attribute.BigInteger;
-    migrant_labor_force_male: Attribute.BigInteger;
-    migrant_labor_force_female: Attribute.BigInteger;
-    migrant_labor_force_youth: Attribute.BigInteger;
-    migrant_labor_force_youth_male: Attribute.BigInteger;
-    migrant_labor_force_youth_female: Attribute.BigInteger;
+    migrant_total: Attribute.Float;
+    migrant_male: Attribute.Float;
+    migrant_female: Attribute.Float;
+    migrant_15_plus: Attribute.Float;
+    migrant_15_plus_male: Attribute.Float;
+    migrant_15_plus_female: Attribute.Float;
+    migrant_labor_force: Attribute.Float;
+    migrant_labor_force_male: Attribute.Float;
+    migrant_labor_force_female: Attribute.Float;
+    migrant_labor_force_youth: Attribute.Float;
+    migrant_labor_force_youth_male: Attribute.Float;
+    migrant_labor_force_youth_female: Attribute.Float;
     year: Attribute.Date;
   };
 }

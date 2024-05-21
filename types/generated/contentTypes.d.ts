@@ -948,6 +948,44 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
   };
 }
 
+export interface ApiMigrantsPerCountryMigrantsPerCountry
+  extends Schema.SingleType {
+  collectionName: 'migrants_per_countries';
+  info: {
+    singularName: 'migrants-per-country';
+    pluralName: 'migrants-per-countries';
+    displayName: 'MigrantsPerCountry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Ethiopia: Attribute.Component<'migration.migration-data', true>;
+    Eritrea: Attribute.Component<'migration.migration-data', true>;
+    Djibouti: Attribute.Component<'migration.migration-data', true>;
+    Somalia: Attribute.Component<'migration.migration-data', true>;
+    Sudan: Attribute.Component<'migration.migration-data', true>;
+    SouthSudan: Attribute.Component<'migration.migration-data', true>;
+    Kenya: Attribute.Component<'migration.migration-data', true>;
+    Uganda: Attribute.Component<'migration.migration-data', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::migrants-per-country.migrants-per-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::migrants-per-country.migrants-per-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPopulationPopulation extends Schema.SingleType {
   collectionName: 'populations';
   info: {
@@ -1126,6 +1164,7 @@ declare module '@strapi/types' {
       'api::home.home': ApiHomeHome;
       'api::igad-region-migrant.igad-region-migrant': ApiIgadRegionMigrantIgadRegionMigrant;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
+      'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
       'api::population.population': ApiPopulationPopulation;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
       'api::publication.publication': ApiPublicationPublication;

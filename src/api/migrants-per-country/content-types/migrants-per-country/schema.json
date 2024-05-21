@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "migrants_per_countries",
+  "info": {
+    "singularName": "migrants-per-country",
+    "pluralName": "migrants-per-countries",
+    "displayName": "MigrantsPerCountry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ethiopia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Eritrea": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Djibouti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Somalia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Sudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "SouthSudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Kenya": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    },
+    "Uganda": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    }
+  }
+}
