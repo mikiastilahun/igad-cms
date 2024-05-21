@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MigrationMigrant extends Schema.Component {
+  collectionName: 'components_migration_migrants';
+  info: {
+    displayName: 'migrant';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    total: Attribute.Float;
+    male: Attribute.Float;
+    female: Attribute.Float;
+  };
+}
+
 export interface MigrationMigrationData extends Schema.Component {
   collectionName: 'components_migration_migration_data';
   info: {
@@ -8,19 +21,11 @@ export interface MigrationMigrationData extends Schema.Component {
     description: '';
   };
   attributes: {
-    migrant_total: Attribute.Float;
-    migrant_male: Attribute.Float;
-    migrant_female: Attribute.Float;
-    migrant_15_plus: Attribute.Float;
-    migrant_15_plus_male: Attribute.Float;
-    migrant_15_plus_female: Attribute.Float;
-    migrant_labor_force: Attribute.Float;
-    migrant_labor_force_male: Attribute.Float;
-    migrant_labor_force_female: Attribute.Float;
-    migrant_labor_force_youth: Attribute.Float;
-    migrant_labor_force_youth_male: Attribute.Float;
-    migrant_labor_force_youth_female: Attribute.Float;
     year: Attribute.Date;
+    total: Attribute.Component<'migration.migrant'>;
+    migrants_15_plus: Attribute.Component<'migration.migrant'>;
+    labor_force_migrants: Attribute.Component<'migration.migrant'>;
+    youth_labor_force_migrants: Attribute.Component<'migration.migrant'>;
   };
 }
 
@@ -147,6 +152,7 @@ export interface StatsticsStatstics extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'migration.migrant': MigrationMigrant;
       'migration.migration-data': MigrationMigrationData;
       'partner.partner': PartnerPartner;
       'population.population-data': PopulationPopulationData;

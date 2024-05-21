@@ -7,44 +7,28 @@
   },
   "options": {},
   "attributes": {
-    "migrant_total": {
-      "type": "float"
-    },
-    "migrant_male": {
-      "type": "float"
-    },
-    "migrant_female": {
-      "type": "float"
-    },
-    "migrant_15_plus": {
-      "type": "float"
-    },
-    "migrant_15_plus_male": {
-      "type": "float"
-    },
-    "migrant_15_plus_female": {
-      "type": "float"
-    },
-    "migrant_labor_force": {
-      "type": "float"
-    },
-    "migrant_labor_force_male": {
-      "type": "float"
-    },
-    "migrant_labor_force_female": {
-      "type": "float"
-    },
-    "migrant_labor_force_youth": {
-      "type": "float"
-    },
-    "migrant_labor_force_youth_male": {
-      "type": "float"
-    },
-    "migrant_labor_force_youth_female": {
-      "type": "float"
-    },
     "year": {
       "type": "date"
+    },
+    "total": {
+      "type": "component",
+      "repeatable": false,
+      "component": "migration.migrant"
+    },
+    "migrants_15_plus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "migration.migrant"
+    },
+    "labor_force_migrants": {
+      "type": "component",
+      "repeatable": false,
+      "component": "migration.migrant"
+    },
+    "youth_labor_force_migrants": {
+      "type": "component",
+      "repeatable": false,
+      "component": "migration.migrant"
     }
   }
 }
