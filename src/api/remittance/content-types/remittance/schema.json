@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "remittances",
+  "info": {
+    "singularName": "remittance",
+    "pluralName": "remittances",
+    "displayName": "Remittance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Djibouti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Eritrea": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Ethiopia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Kenya": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Somalia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "SouthSudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Sudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    },
+    "Uganda": {
+      "type": "component",
+      "repeatable": true,
+      "component": "remittance.remittance"
+    }
+  }
+}

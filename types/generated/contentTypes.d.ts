@@ -1179,6 +1179,43 @@ export interface ApiRefugeeRefugee extends Schema.SingleType {
   };
 }
 
+export interface ApiRemittanceRemittance extends Schema.SingleType {
+  collectionName: 'remittances';
+  info: {
+    singularName: 'remittance';
+    pluralName: 'remittances';
+    displayName: 'Remittance';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Djibouti: Attribute.Component<'remittance.remittance', true>;
+    Eritrea: Attribute.Component<'remittance.remittance', true>;
+    Ethiopia: Attribute.Component<'remittance.remittance', true>;
+    Kenya: Attribute.Component<'remittance.remittance', true>;
+    Somalia: Attribute.Component<'remittance.remittance', true>;
+    SouthSudan: Attribute.Component<'remittance.remittance', true>;
+    Sudan: Attribute.Component<'remittance.remittance', true>;
+    Uganda: Attribute.Component<'remittance.remittance', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::remittance.remittance',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::remittance.remittance',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1208,6 +1245,7 @@ declare module '@strapi/types' {
       'api::publication.publication': ApiPublicationPublication;
       'api::publication-type.publication-type': ApiPublicationTypePublicationType;
       'api::refugee.refugee': ApiRefugeeRefugee;
+      'api::remittance.remittance': ApiRemittanceRemittance;
     }
   }
 }

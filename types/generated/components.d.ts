@@ -101,6 +101,19 @@ export interface RefugeeRefugeeData extends Schema.Component {
   };
 }
 
+export interface RemittanceRemittance extends Schema.Component {
+  collectionName: 'components_remittance_remittances';
+  info: {
+    displayName: 'Remittance';
+    icon: 'briefcase';
+  };
+  attributes: {
+    region: Attribute.String & Attribute.DefaultTo<'East Africa'>;
+    amount: Attribute.Float;
+    year: Attribute.Date;
+  };
+}
+
 export interface StatsticsRegionalStat extends Schema.Component {
   collectionName: 'components_statstics_regional_stats';
   info: {
@@ -141,6 +154,7 @@ declare module '@strapi/types' {
       'priority-areas.action-items': PriorityAreasActionItems;
       'priority-areas.links': PriorityAreasLinks;
       'refugee.refugee-data': RefugeeRefugeeData;
+      'remittance.remittance': RemittanceRemittance;
       'statstics.regional-stat': StatsticsRegionalStat;
       'statstics.statstics': StatsticsStatstics;
     }
