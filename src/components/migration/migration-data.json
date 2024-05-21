@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_migration_migration_data",
+  "info": {
+    "displayName": "MigrationData",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "migrant_total": {
+      "type": "biginteger"
+    },
+    "migrant_male": {
+      "type": "biginteger"
+    },
+    "migrant_female": {
+      "type": "biginteger"
+    },
+    "migrant_15_plus": {
+      "type": "biginteger"
+    },
+    "migrant_15_plus_male": {
+      "type": "biginteger"
+    },
+    "migrant_15_plus_female": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force_male": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force_female": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force_youth": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force_youth_male": {
+      "type": "biginteger"
+    },
+    "migrant_labor_force_youth_female": {
+      "type": "biginteger"
+    },
+    "year": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "igad_region_migrants",
+  "info": {
+    "singularName": "igad-region-migrant",
+    "pluralName": "igad-region-migrants",
+    "displayName": "IGAD_Region_Migrant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "migrant": {
+      "type": "component",
+      "repeatable": true,
+      "component": "migration.migration-data"
+    }
+  }
+}

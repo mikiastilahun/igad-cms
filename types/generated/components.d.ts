@@ -1,5 +1,29 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MigrationMigrationData extends Schema.Component {
+  collectionName: 'components_migration_migration_data';
+  info: {
+    displayName: 'MigrationData';
+    icon: 'earth';
+    description: '';
+  };
+  attributes: {
+    migrant_total: Attribute.BigInteger;
+    migrant_male: Attribute.BigInteger;
+    migrant_female: Attribute.BigInteger;
+    migrant_15_plus: Attribute.BigInteger;
+    migrant_15_plus_male: Attribute.BigInteger;
+    migrant_15_plus_female: Attribute.BigInteger;
+    migrant_labor_force: Attribute.BigInteger;
+    migrant_labor_force_male: Attribute.BigInteger;
+    migrant_labor_force_female: Attribute.BigInteger;
+    migrant_labor_force_youth: Attribute.BigInteger;
+    migrant_labor_force_youth_male: Attribute.BigInteger;
+    migrant_labor_force_youth_female: Attribute.BigInteger;
+    year: Attribute.Date;
+  };
+}
+
 export interface PartnerPartner extends Schema.Component {
   collectionName: 'components_partner_partners';
   info: {
@@ -93,6 +117,7 @@ export interface StatsticsStatstics extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'migration.migration-data': MigrationMigrationData;
       'partner.partner': PartnerPartner;
       'population.population-data': PopulationPopulationData;
       'priority-areas.action-item-list': PriorityAreasActionItemList;
