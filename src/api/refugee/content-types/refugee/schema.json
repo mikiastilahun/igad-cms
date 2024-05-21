@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "refugees",
+  "info": {
+    "singularName": "refugee",
+    "pluralName": "refugees",
+    "displayName": "Refugee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Djibouti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Eritrea": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Ethiopia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Kenya": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Somalia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "SouthSudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Sudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    },
+    "Uganda": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refugee.refugee-data"
+    }
+  }
+}

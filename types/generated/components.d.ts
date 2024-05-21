@@ -84,6 +84,23 @@ export interface PriorityAreasLinks extends Schema.Component {
   };
 }
 
+export interface RefugeeRefugeeData extends Schema.Component {
+  collectionName: 'components_refugee_refugee_data';
+  info: {
+    displayName: 'refugeeData';
+    icon: 'handHeart';
+  };
+  attributes: {
+    year: Attribute.Date;
+    age_group: Attribute.Enumeration<
+      ['age 0-4', 'age 5-11', 'age 12-17', 'age 18-59', 'age 60+']
+    > &
+      Attribute.Required;
+    male: Attribute.Float;
+    female: Attribute.Float;
+  };
+}
+
 export interface StatsticsRegionalStat extends Schema.Component {
   collectionName: 'components_statstics_regional_stats';
   info: {
@@ -123,6 +140,7 @@ declare module '@strapi/types' {
       'priority-areas.action-item-list': PriorityAreasActionItemList;
       'priority-areas.action-items': PriorityAreasActionItems;
       'priority-areas.links': PriorityAreasLinks;
+      'refugee.refugee-data': RefugeeRefugeeData;
       'statstics.regional-stat': StatsticsRegionalStat;
       'statstics.statstics': StatsticsStatstics;
     }

@@ -1141,6 +1141,44 @@ export interface ApiPublicationTypePublicationType
   };
 }
 
+export interface ApiRefugeeRefugee extends Schema.SingleType {
+  collectionName: 'refugees';
+  info: {
+    singularName: 'refugee';
+    pluralName: 'refugees';
+    displayName: 'Refugee';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Djibouti: Attribute.Component<'refugee.refugee-data', true>;
+    Eritrea: Attribute.Component<'refugee.refugee-data', true>;
+    Ethiopia: Attribute.Component<'refugee.refugee-data', true>;
+    Kenya: Attribute.Component<'refugee.refugee-data', true>;
+    Somalia: Attribute.Component<'refugee.refugee-data', true>;
+    SouthSudan: Attribute.Component<'refugee.refugee-data', true>;
+    Sudan: Attribute.Component<'refugee.refugee-data', true>;
+    Uganda: Attribute.Component<'refugee.refugee-data', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::refugee.refugee',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::refugee.refugee',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1169,6 +1207,7 @@ declare module '@strapi/types' {
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
       'api::publication.publication': ApiPublicationPublication;
       'api::publication-type.publication-type': ApiPublicationTypePublicationType;
+      'api::refugee.refugee': ApiRefugeeRefugee;
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_refugee_refugee_data",
+  "info": {
+    "displayName": "refugeeData",
+    "icon": "handHeart"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "date"
+    },
+    "age_group": {
+      "type": "enumeration",
+      "enum": [
+        "age 0-4",
+        "age 5-11",
+        "age 12-17",
+        "age 18-59",
+        "age 60+"
+      ],
+      "required": true
+    },
+    "male": {
+      "type": "float"
+    },
+    "female": {
+      "type": "float"
+    }
+  }
+}
