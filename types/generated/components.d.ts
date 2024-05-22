@@ -52,6 +52,42 @@ export interface PopulationPopulationData extends Schema.Component {
   };
 }
 
+export interface PopulationPopulation extends Schema.Component {
+  collectionName: 'components_population_populations';
+  info: {
+    displayName: 'population';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    year: Attribute.Date;
+    age_group: Attribute.Enumeration<
+      [
+        'age 0-4',
+        'age 5-9',
+        'age 10-14',
+        'age 15-19',
+        'age 20-24',
+        'age 25-29',
+        'age 30-34',
+        'age 35-39',
+        'age 40-44',
+        'age 45-49',
+        'age 50-54',
+        'age 55-59',
+        'age 60-64',
+        'age 65-69',
+        'age 70-74',
+        'age 75-79',
+        'age 80+'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'age 0-4'>;
+    male: Attribute.Float;
+    female: Attribute.Float;
+  };
+}
+
 export interface PriorityAreasActionItemList extends Schema.Component {
   collectionName: 'components_priority_areas_action_item_lists';
   info: {
@@ -156,6 +192,7 @@ declare module '@strapi/types' {
       'migration.migration-data': MigrationMigrationData;
       'partner.partner': PartnerPartner;
       'population.population-data': PopulationPopulationData;
+      'population.population': PopulationPopulation;
       'priority-areas.action-item-list': PriorityAreasActionItemList;
       'priority-areas.action-items': PriorityAreasActionItems;
       'priority-areas.links': PriorityAreasLinks;

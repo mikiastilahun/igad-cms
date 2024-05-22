@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_population_populations",
+  "info": {
+    "displayName": "population",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "date"
+    },
+    "age_group": {
+      "type": "enumeration",
+      "enum": [
+        "age 0-4",
+        "age 5-9",
+        "age 10-14",
+        "age 15-19",
+        "age 20-24",
+        "age 25-29",
+        "age 30-34",
+        "age 35-39",
+        "age 40-44",
+        "age 45-49",
+        "age 50-54",
+        "age 55-59",
+        "age 60-64",
+        "age 65-69",
+        "age 70-74",
+        "age 75-79",
+        "age 80+"
+      ],
+      "required": true,
+      "default": "age 0-4"
+    },
+    "male": {
+      "type": "float"
+    },
+    "female": {
+      "type": "float"
+    }
+  }
+}

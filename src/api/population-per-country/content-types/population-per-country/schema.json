@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "population_per_countries",
+  "info": {
+    "singularName": "population-per-country",
+    "pluralName": "population-per-countries",
+    "displayName": "PopulationPerCountry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Djibouti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Eritrea": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Ethiopia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Kenya": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Somalia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "SouthSudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Sudan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    },
+    "Uganda": {
+      "type": "component",
+      "repeatable": true,
+      "component": "population.population"
+    }
+  }
+}

@@ -1024,6 +1024,44 @@ export interface ApiPopulationPopulation extends Schema.SingleType {
   };
 }
 
+export interface ApiPopulationPerCountryPopulationPerCountry
+  extends Schema.SingleType {
+  collectionName: 'population_per_countries';
+  info: {
+    singularName: 'population-per-country';
+    pluralName: 'population-per-countries';
+    displayName: 'PopulationPerCountry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Djibouti: Attribute.Component<'population.population', true>;
+    Eritrea: Attribute.Component<'population.population', true>;
+    Ethiopia: Attribute.Component<'population.population', true>;
+    Kenya: Attribute.Component<'population.population', true>;
+    Somalia: Attribute.Component<'population.population', true>;
+    SouthSudan: Attribute.Component<'population.population', true>;
+    Sudan: Attribute.Component<'population.population', true>;
+    Uganda: Attribute.Component<'population.population', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::population-per-country.population-per-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::population-per-country.population-per-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
   collectionName: 'priority_areas';
   info: {
@@ -1241,6 +1279,7 @@ declare module '@strapi/types' {
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
       'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
       'api::population.population': ApiPopulationPopulation;
+      'api::population-per-country.population-per-country': ApiPopulationPerCountryPopulationPerCountry;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
       'api::publication.publication': ApiPublicationPublication;
       'api::publication-type.publication-type': ApiPublicationTypePublicationType;
