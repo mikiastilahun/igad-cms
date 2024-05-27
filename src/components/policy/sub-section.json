@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_policy_sub_sections",
+  "info": {
+    "displayName": "subSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

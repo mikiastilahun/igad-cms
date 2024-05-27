@@ -1017,6 +1017,38 @@ export interface ApiMigrantsPerCountryMigrantsPerCountry
   };
 }
 
+export interface ApiPolicyPolicy extends Schema.SingleType {
+  collectionName: 'policies';
+  info: {
+    singularName: 'policy';
+    pluralName: 'policies';
+    displayName: 'policy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    section: Attribute.Component<'policy.section', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::policy.policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::policy.policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPopulationPopulation extends Schema.SingleType {
   collectionName: 'populations';
   info: {
@@ -1310,6 +1342,7 @@ declare module '@strapi/types' {
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
       'api::learning-material-interest-form.learning-material-interest-form': ApiLearningMaterialInterestFormLearningMaterialInterestForm;
       'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
+      'api::policy.policy': ApiPolicyPolicy;
       'api::population.population': ApiPopulationPopulation;
       'api::population-per-country.population-per-country': ApiPopulationPerCountryPopulationPerCountry;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;

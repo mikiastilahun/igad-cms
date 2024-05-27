@@ -39,6 +39,31 @@ export interface PartnerPartner extends Schema.Component {
   };
 }
 
+export interface PolicySection extends Schema.Component {
+  collectionName: 'components_policy_sections';
+  info: {
+    displayName: 'section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.Text;
+    subSection: Attribute.Component<'policy.sub-section', true>;
+    files: Attribute.Media;
+  };
+}
+
+export interface PolicySubSection extends Schema.Component {
+  collectionName: 'components_policy_sub_sections';
+  info: {
+    displayName: 'subSection';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.Text;
+  };
+}
+
 export interface PopulationPopulationData extends Schema.Component {
   collectionName: 'components_population_population_data';
   info: {
@@ -191,6 +216,8 @@ declare module '@strapi/types' {
       'migration.migrant': MigrationMigrant;
       'migration.migration-data': MigrationMigrationData;
       'partner.partner': PartnerPartner;
+      'policy.section': PolicySection;
+      'policy.sub-section': PolicySubSection;
       'population.population-data': PopulationPopulationData;
       'population.population': PopulationPopulation;
       'priority-areas.action-item-list': PriorityAreasActionItemList;
