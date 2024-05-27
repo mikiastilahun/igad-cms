@@ -5,9 +5,9 @@ export interface MigrationMigrant extends Schema.Component {
   info: {
     displayName: 'migrant';
     icon: 'emotionHappy';
+    description: '';
   };
   attributes: {
-    total: Attribute.Float;
     male: Attribute.Float;
     female: Attribute.Float;
   };
@@ -22,7 +22,6 @@ export interface MigrationMigrationData extends Schema.Component {
   };
   attributes: {
     year: Attribute.Date;
-    total: Attribute.Component<'migration.migrant'>;
     migrants_15_plus: Attribute.Component<'migration.migrant'>;
     labor_force_migrants: Attribute.Component<'migration.migrant'>;
     youth_labor_force_migrants: Attribute.Component<'migration.migrant'>;
@@ -147,6 +146,7 @@ export interface RemittanceRemittance extends Schema.Component {
   info: {
     displayName: 'Remittance';
     icon: 'briefcase';
+    description: '';
   };
   attributes: {
     region: Attribute.String & Attribute.DefaultTo<'East Africa'>;

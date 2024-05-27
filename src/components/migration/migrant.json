@@ -2,13 +2,11 @@
   "collectionName": "components_migration_migrants",
   "info": {
     "displayName": "migrant",
-    "icon": "emotionHappy"
+    "icon": "emotionHappy",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "total": {
-      "type": "float"
-    },
     "male": {
       "type": "float"
     },

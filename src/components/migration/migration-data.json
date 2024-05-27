@@ -10,11 +10,6 @@
     "year": {
       "type": "date"
     },
-    "total": {
-      "type": "component",
-      "repeatable": false,
-      "component": "migration.migrant"
-    },
     "migrants_15_plus": {
       "type": "component",
       "repeatable": false,
