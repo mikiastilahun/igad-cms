@@ -948,6 +948,37 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
   };
 }
 
+export interface ApiLearningMaterialInterestFormLearningMaterialInterestForm
+  extends Schema.CollectionType {
+  collectionName: 'learning_material_interest_forms';
+  info: {
+    singularName: 'learning-material-interest-form';
+    pluralName: 'learning-material-interest-forms';
+    displayName: 'LearningMaterialInterestForm';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    fullname: Attribute.String;
+    email: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::learning-material-interest-form.learning-material-interest-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::learning-material-interest-form.learning-material-interest-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMigrantsPerCountryMigrantsPerCountry
   extends Schema.SingleType {
   collectionName: 'migrants_per_countries';
@@ -1277,6 +1308,7 @@ declare module '@strapi/types' {
       'api::home.home': ApiHomeHome;
       'api::igad-region-migrant.igad-region-migrant': ApiIgadRegionMigrantIgadRegionMigrant;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
+      'api::learning-material-interest-form.learning-material-interest-form': ApiLearningMaterialInterestFormLearningMaterialInterestForm;
       'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
       'api::population.population': ApiPopulationPopulation;
       'api::population-per-country.population-per-country': ApiPopulationPerCountryPopulationPerCountry;

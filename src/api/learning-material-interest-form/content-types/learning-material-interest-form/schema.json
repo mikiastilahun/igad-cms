@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_material_interest_forms",
+  "info": {
+    "singularName": "learning-material-interest-form",
+    "pluralName": "learning-material-interest-forms",
+    "displayName": "LearningMaterialInterestForm"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
