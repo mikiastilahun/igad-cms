@@ -26,9 +26,6 @@
         "audios"
       ]
     },
-    "content": {
-      "type": "richtext"
-    },
     "files": {
       "type": "media",
       "multiple": true,
@@ -50,6 +47,14 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::publication-type.publication-type"
+    },
+    "mainContent": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
