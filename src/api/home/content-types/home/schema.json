@@ -39,11 +39,6 @@
     "regionalStatisticsDescription": {
       "type": "text"
     },
-    "regionalStatistic": {
-      "type": "component",
-      "repeatable": true,
-      "component": "statstics.regional-stat"
-    },
     "SupportplatformTitle": {
       "type": "string"
     },
@@ -60,14 +55,20 @@
       "type": "richtext"
     },
     "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "quickLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "priority-areas.links"
     }
   }
 }

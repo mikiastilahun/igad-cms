@@ -876,12 +876,12 @@ export interface ApiHomeHome extends Schema.SingleType {
     forthStat: Attribute.Component<'statstics.statstics'>;
     regionalStatisticsTitle: Attribute.String;
     regionalStatisticsDescription: Attribute.Text;
-    regionalStatistic: Attribute.Component<'statstics.regional-stat', true>;
     SupportplatformTitle: Attribute.String;
     partnersTitle: Attribute.String;
     partner: Attribute.Component<'partner.partner', true>;
     supportPlatformContent: Attribute.RichText;
     BackgroundImage: Attribute.Media;
+    quickLinks: Attribute.Component<'priority-areas.links', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
