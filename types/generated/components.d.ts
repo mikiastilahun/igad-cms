@@ -210,6 +210,18 @@ export interface StatsticsStatstics extends Schema.Component {
   };
 }
 
+export interface TimeSpanDuration extends Schema.Component {
+  collectionName: 'components_time_span_durations';
+  info: {
+    displayName: 'duration';
+    icon: 'clock';
+  };
+  attributes: {
+    from: Attribute.Date;
+    to: Attribute.Date;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -227,6 +239,7 @@ declare module '@strapi/types' {
       'remittance.remittance': RemittanceRemittance;
       'statstics.regional-stat': StatsticsRegionalStat;
       'statstics.statstics': StatsticsStatstics;
+      'time-span.duration': TimeSpanDuration;
     }
   }
 }

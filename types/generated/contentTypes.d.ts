@@ -1185,6 +1185,76 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
   };
 }
 
+export interface ApiProjectProject extends Schema.CollectionType {
+  collectionName: 'projects';
+  info: {
+    singularName: 'project';
+    pluralName: 'projects';
+    displayName: 'Projects';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    implementing_organization: Attribute.String;
+    region: Attribute.String;
+    funding_organization: Attribute.String;
+    budget: Attribute.Float;
+    duration: Attribute.Component<'time-span.duration'>;
+    objectives: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    key_outcomes: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    major_activities_and_achievement: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    cover_image: Attribute.Media;
+    files: Attribute.Media;
+    project_background: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPublicationPublication extends Schema.CollectionType {
   collectionName: 'publications';
   info: {
@@ -1367,6 +1437,7 @@ declare module '@strapi/types' {
       'api::population.population': ApiPopulationPopulation;
       'api::population-per-country.population-per-country': ApiPopulationPerCountryPopulationPerCountry;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
+      'api::project.project': ApiProjectProject;
       'api::publication.publication': ApiPublicationPublication;
       'api::publication-type.publication-type': ApiPublicationTypePublicationType;
       'api::refugee.refugee': ApiRefugeeRefugee;
