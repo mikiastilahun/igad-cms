@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_event_contacts",
+  "info": {
+    "displayName": "contact",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

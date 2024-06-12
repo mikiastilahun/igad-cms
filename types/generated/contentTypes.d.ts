@@ -830,16 +830,26 @@ export interface ApiEventEvent extends Schema.CollectionType {
     singularName: 'event';
     pluralName: 'events';
     displayName: 'events';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
     location: Attribute.String;
     date: Attribute.DateTime;
     thumbnail: Attribute.Media;
+    organizer: Attribute.String;
+    contact: Attribute.Component<'event.contact'> & Attribute.Required;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "events"
+    "displayName": "events",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "location": {
       "type": "string"
     },
@@ -24,14 +22,33 @@
       "type": "datetime"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "organizer": {
+      "type": "string"
+    },
+    "contact": {
+      "displayName": "contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "event.contact",
+      "required": true
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

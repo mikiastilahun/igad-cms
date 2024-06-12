@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface EventContact extends Schema.Component {
+  collectionName: 'components_event_contacts';
+  info: {
+    displayName: 'contact';
+    icon: 'envelop';
+  };
+  attributes: {
+    email: Attribute.String;
+    phone: Attribute.String;
+    website: Attribute.String;
+  };
+}
+
 export interface MigrationMigrant extends Schema.Component {
   collectionName: 'components_migration_migrants';
   info: {
@@ -225,6 +238,7 @@ export interface TimeSpanDuration extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'event.contact': EventContact;
       'migration.migrant': MigrationMigrant;
       'migration.migration-data': MigrationMigrationData;
       'partner.partner': PartnerPartner;
