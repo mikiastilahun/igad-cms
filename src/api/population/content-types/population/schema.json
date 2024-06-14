@@ -51,6 +51,14 @@
       "type": "component",
       "repeatable": true,
       "component": "population.population-data"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

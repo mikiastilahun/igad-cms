@@ -4,7 +4,8 @@
   "info": {
     "singularName": "remittance",
     "pluralName": "remittances",
-    "displayName": "Remittance"
+    "displayName": "Remittance",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -50,6 +51,14 @@
       "type": "component",
       "repeatable": true,
       "component": "remittance.remittance"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

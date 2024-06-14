@@ -915,6 +915,14 @@ export interface ApiIgadRegionMigrantIgadRegionMigrant
   };
   attributes: {
     migrant: Attribute.Component<'migration.migration-data', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1003,6 +1011,7 @@ export interface ApiMigrantsPerCountryMigrantsPerCountry
     singularName: 'migrants-per-country';
     pluralName: 'migrants-per-countries';
     displayName: 'MigrantsPerCountry';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1016,6 +1025,14 @@ export interface ApiMigrantsPerCountryMigrantsPerCountry
     SouthSudan: Attribute.Component<'migration.migration-data', true>;
     Kenya: Attribute.Component<'migration.migration-data', true>;
     Uganda: Attribute.Component<'migration.migration-data', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1086,6 +1103,14 @@ export interface ApiPopulationPopulation extends Schema.SingleType {
     SouthSudan: Attribute.Component<'population.population-data', true>;
     Sudan: Attribute.Component<'population.population-data', true>;
     Uganda: Attribute.Component<'population.population-data', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1111,6 +1136,7 @@ export interface ApiPopulationPerCountryPopulationPerCountry
     singularName: 'population-per-country';
     pluralName: 'population-per-countries';
     displayName: 'PopulationPerCountry';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1124,6 +1150,14 @@ export interface ApiPopulationPerCountryPopulationPerCountry
     SouthSudan: Attribute.Component<'population.population', true>;
     Sudan: Attribute.Component<'population.population', true>;
     Uganda: Attribute.Component<'population.population', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1363,6 +1397,14 @@ export interface ApiRefugeeRefugee extends Schema.SingleType {
     SouthSudan: Attribute.Component<'refugee.refugee-data', true>;
     Sudan: Attribute.Component<'refugee.refugee-data', true>;
     Uganda: Attribute.Component<'refugee.refugee-data', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1387,6 +1429,7 @@ export interface ApiRemittanceRemittance extends Schema.SingleType {
     singularName: 'remittance';
     pluralName: 'remittances';
     displayName: 'Remittance';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1400,6 +1443,14 @@ export interface ApiRemittanceRemittance extends Schema.SingleType {
     SouthSudan: Attribute.Component<'remittance.remittance', true>;
     Sudan: Attribute.Component<'remittance.remittance', true>;
     Uganda: Attribute.Component<'remittance.remittance', true>;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
