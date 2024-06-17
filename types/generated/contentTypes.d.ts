@@ -947,6 +947,7 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
     singularName: 'learning-link';
     pluralName: 'learning-links';
     displayName: 'learningLink';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -956,6 +957,11 @@ export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
     description: Attribute.Text;
     thumbnail: Attribute.Media;
     URL: Attribute.String;
+    learning_material_type: Attribute.Relation<
+      'api::learning-link.learning-link',
+      'oneToOne',
+      'api::learning-material-type.learning-material-type'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -997,6 +1003,37 @@ export interface ApiLearningMaterialInterestFormLearningMaterialInterestForm
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::learning-material-interest-form.learning-material-interest-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLearningMaterialTypeLearningMaterialType
+  extends Schema.CollectionType {
+  collectionName: 'learning_material_types';
+  info: {
+    singularName: 'learning-material-type';
+    pluralName: 'learning-material-types';
+    displayName: 'LearningMaterialType';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::learning-material-type.learning-material-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::learning-material-type.learning-material-type',
       'oneToOne',
       'admin::user'
     > &
@@ -1493,6 +1530,7 @@ declare module '@strapi/types' {
       'api::igad-region-migrant.igad-region-migrant': ApiIgadRegionMigrantIgadRegionMigrant;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
       'api::learning-material-interest-form.learning-material-interest-form': ApiLearningMaterialInterestFormLearningMaterialInterestForm;
+      'api::learning-material-type.learning-material-type': ApiLearningMaterialTypeLearningMaterialType;
       'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
       'api::policy.policy': ApiPolicyPolicy;
       'api::population.population': ApiPopulationPopulation;

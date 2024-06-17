@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_material_types",
+  "info": {
+    "singularName": "learning-material-type",
+    "pluralName": "learning-material-types",
+    "displayName": "LearningMaterialType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  }
+}
