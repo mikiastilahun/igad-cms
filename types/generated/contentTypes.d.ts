@@ -901,46 +901,6 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
-export interface ApiIgadRegionMigrantIgadRegionMigrant
-  extends Schema.SingleType {
-  collectionName: 'igad_region_migrants';
-  info: {
-    singularName: 'igad-region-migrant';
-    pluralName: 'igad-region-migrants';
-    displayName: 'IGAD_Region_Migrant';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    migrant: Attribute.Component<'migration.migration-data', true>;
-    content: Attribute.RichText &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::igad-region-migrant.igad-region-migrant',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::igad-region-migrant.igad-region-migrant',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiLearningLinkLearningLink extends Schema.CollectionType {
   collectionName: 'learning_links';
   info: {
@@ -1527,7 +1487,6 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
-      'api::igad-region-migrant.igad-region-migrant': ApiIgadRegionMigrantIgadRegionMigrant;
       'api::learning-link.learning-link': ApiLearningLinkLearningLink;
       'api::learning-material-interest-form.learning-material-interest-form': ApiLearningMaterialInterestFormLearningMaterialInterestForm;
       'api::learning-material-type.learning-material-type': ApiLearningMaterialTypeLearningMaterialType;
