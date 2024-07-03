@@ -1166,13 +1166,13 @@ export interface ApiPopulationPopulation extends Schema.SingleType {
   };
 }
 
-export interface ApiPopulationPerCountryPopulationPerCountry
+export interface ApiPopulationWithAgeGroupPopulationWithAgeGroup
   extends Schema.SingleType {
-  collectionName: 'population_per_countries';
+  collectionName: 'population_with_age_groups';
   info: {
-    singularName: 'population-per-country';
-    pluralName: 'population-per-countries';
-    displayName: 'PopulationPerCountry';
+    singularName: 'population-with-age-group';
+    pluralName: 'population-with-age-groups';
+    displayName: 'PopulationWithAgeGroup';
     description: '';
   };
   options: {
@@ -1199,13 +1199,13 @@ export interface ApiPopulationPerCountryPopulationPerCountry
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::population-per-country.population-per-country',
+      'api::population-with-age-group.population-with-age-group',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::population-per-country.population-per-country',
+      'api::population-with-age-group.population-with-age-group',
       'oneToOne',
       'admin::user'
     > &
@@ -1534,7 +1534,7 @@ declare module '@strapi/types' {
       'api::migrants-per-country.migrants-per-country': ApiMigrantsPerCountryMigrantsPerCountry;
       'api::policy.policy': ApiPolicyPolicy;
       'api::population.population': ApiPopulationPopulation;
-      'api::population-per-country.population-per-country': ApiPopulationPerCountryPopulationPerCountry;
+      'api::population-with-age-group.population-with-age-group': ApiPopulationWithAgeGroupPopulationWithAgeGroup;
       'api::priority-area.priority-area': ApiPriorityAreaPriorityArea;
       'api::project.project': ApiProjectProject;
       'api::publication.publication': ApiPublicationPublication;

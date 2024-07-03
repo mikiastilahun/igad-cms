@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "population_per_countries",
+  "collectionName": "population_with_age_groups",
   "info": {
-    "singularName": "population-per-country",
-    "pluralName": "population-per-countries",
-    "displayName": "PopulationPerCountry",
+    "singularName": "population-with-age-group",
+    "pluralName": "population-with-age-groups",
+    "displayName": "PopulationWithAgeGroup",
     "description": ""
   },
   "options": {

@@ -81,11 +81,14 @@ export interface PopulationPopulationData extends Schema.Component {
   collectionName: 'components_population_population_data';
   info: {
     displayName: 'populationData';
+    description: '';
   };
   attributes: {
     year: Attribute.Date;
     male: Attribute.BigInteger;
     female: Attribute.BigInteger;
+    male15plus: Attribute.BigInteger;
+    female15plus: Attribute.BigInteger;
   };
 }
 
