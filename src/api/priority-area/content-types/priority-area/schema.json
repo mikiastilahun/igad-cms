@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "ShortDescription": {
+    "shortDescription": {
       "type": "string"
     },
     "icon": {
@@ -64,6 +64,10 @@
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

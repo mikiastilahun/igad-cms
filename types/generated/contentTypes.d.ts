@@ -806,6 +806,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    slug: Attribute.UID<'api::article.article', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -850,6 +851,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
           preset: 'standard';
         }
       >;
+    slug: Attribute.UID<'api::event.event', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1185,8 +1187,8 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    ShortDescription: Attribute.String;
+    title: Attribute.String;
+    shortDescription: Attribute.String;
     icon: Attribute.Media;
     IgadActions: Attribute.Component<'priority-areas.action-items', true>;
     memberStateActions: Attribute.Component<
@@ -1208,6 +1210,7 @@ export interface ApiPriorityAreaPriorityArea extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    slug: Attribute.UID<'api::priority-area.priority-area', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1278,6 +1281,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
           preset: 'standard';
         }
       >;
+    slug: Attribute.UID<'api::project.project', 'name'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1326,6 +1330,7 @@ export interface ApiPublicationPublication extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    slug: Attribute.UID<'api::publication.publication', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

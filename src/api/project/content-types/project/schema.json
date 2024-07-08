@@ -86,6 +86,10 @@
         "preset": "standard"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
